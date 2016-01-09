@@ -5,19 +5,20 @@ var podcastService = require('../services/podcastService');
 
 router.post('/podcasts', (req, res) => {
     podcastService.add(req.body.url)
-        .then(res.send)
+        .then(resp => res.send(resp))
         .catch(err => {
             console.error(err);
-            res.sendStatus(500)
+            res.status(500).send(err.message);
         });
 });
 
 router.get('/podcasts/:url', (req, res) => {
-    podcastService.get(req.param.url)
-        .then(res.send)
+    console.log(req.params.url);
+    podcastService.get(req.params.url)
+        .then(resp => res.send(resp))
         .catch(err => {
             console.error(err);
-            res.sendStatus(500)
+            res.status(500).send(err.message);
         });
 });
 
