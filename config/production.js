@@ -4,5 +4,9 @@ module.exports = {
     server: {
         port: 3000
     },
-    db: path.resolve('./data/db.json')
+    db: {
+        port: 28015,
+        host: 'localhost',
+        table: 'podcasts'
+    }
 };

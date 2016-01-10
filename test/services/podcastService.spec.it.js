@@ -1,9 +1,14 @@
 var expect = require('expect.js');
 var Q = require('q');
+var r = require('rethinkdb');
 
+var Config = require('../../services/configService');
 var podcastService = require('../../services/podcastService');
+var conn;
 
 describe('PodcastService', function () {
+    this.timeout(10000);
+
     var fixture = [
         {
             title: 'Hanselminutes',
@@ -19,10 +24,20 @@ describe('PodcastService', function () {
         }
     ];
 
-    beforeEach((done) => {
-        podcastService.truncate()
+    beforeEach(done => {
+        r.connect(Config.get('db'))
+            .then(_conn => conn = _conn)
+            .then(() => r.tableCreate(Config.get('db:table')).run(conn))
+            .then(() => r.table(Config.get('db:table')).indexCreate('url').run(conn))
+            .then(() => podcastService.truncate())
             .then(() => done())
-            .catch(done)
+            .catch(done);
+    });
+
+    afterEach(done => {
+        r.tableDrop(Config.get('db:table')).run(conn)
+            .then(() => done())
+            .catch(done);
     });
 
     it('grabs podcast xml rss feed.', done => {
@@ -70,11 +85,7 @@ describe('PodcastService', function () {
             .then(() => podcastService.add(fixture[1].url))
             .then(() => podcastService.getAll())
             .then(resp => {
-                delete resp[0].id;
-                delete resp[1].id;
-
-                expect(resp[0]).to.eql(fixture[0]);
-                expect(resp[1]).to.eql(fixture[1]);
+                expect(resp.length).to.be(2);
             })
             .then(() => done())
             .catch(done);
