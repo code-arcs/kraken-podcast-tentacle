@@ -9,7 +9,8 @@ var podcastRepository = require('../repositories/podcastRepository');
 module.exports = {
     add: add,
     truncate: podcastRepository.truncate,
-    get: podcastRepository.findByUrl
+    get: podcastRepository.findById,
+    getAll: podcastRepository.findAll
 };
 
 function add(feedUrl) {

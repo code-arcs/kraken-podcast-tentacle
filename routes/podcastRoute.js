@@ -12,9 +12,17 @@ router.post('/podcasts', (req, res) => {
         });
 });
 
-router.get('/podcasts/:url', (req, res) => {
-    console.log(req.params.url);
-    podcastService.get(req.params.url)
+router.get('/podcasts/:id', (req, res) => {
+    podcastService.get(req.params.id)
+        .then(resp => res.send(resp))
+        .catch(err => {
+            console.error(err);
+            res.status(500).send(err.message);
+        });
+});
+
+router.get('/podcasts',(req, res) => {
+    podcastService.getAll()
         .then(resp => res.send(resp))
         .catch(err => {
             console.error(err);
