@@ -8,10 +8,12 @@ var glob = require('glob');
 var Config = require('./services/configService');
 
 var app = express();
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(expressValidator());
 app.use(cookieParser());
+app.use('/_views', express.static(path.join(__dirname, 'public')));
 
 glob.sync('./routes/**/*.js').forEach(route => {
   app.use('/', require(route));

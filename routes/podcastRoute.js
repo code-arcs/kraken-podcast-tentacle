@@ -21,7 +21,7 @@ router.get('/podcasts/:id', (req, res) => {
         });
 });
 
-router.get('/podcasts',(req, res) => {
+router.get('/podcasts', (req, res) => {
     podcastService.getAll()
         .then(resp => res.send(resp))
         .catch(err => {

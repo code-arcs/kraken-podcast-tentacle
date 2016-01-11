@@ -4,8 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "test": "export NODE_ENV=test && mocha --reporter spec ./test/**/*.spec.js",
-    "test-it": "export NODE_ENV=test && mocha --reporter spec ./test/**/*.spec.it.js"
+    "test": "NODE_ENV=test mocha --reporter spec ./test/**/*.spec.js",
+    "test-it": "NODE_ENV=test mocha --reporter spec ./test/**/*.spec.it.js",
+    "db:create": "node ./config/tasks/createDb.js",
+    "db:drop": "node ./config/tasks/dropDb.js",
+    "db:setup:dev": "node ./config/tasks/insertTestData.js"
   },
   "dependencies": {
     "body-parser": "~1.14.2",
@@ -14,6 +17,7 @@
     "express": "~4.13.3",
     "express-validator": "^2.18.0",
     "glob": "^6.0.4",
+    "hbs": "^4.0.0",
     "nconf": "^0.8.2",
     "node-uuid": "^1.4.7",
     "q": "^1.4.1",
