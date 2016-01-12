@@ -8,7 +8,8 @@
     "test-it": "NODE_ENV=test mocha --reporter spec ./test/**/*.spec.it.js",
     "db:create": "node ./config/tasks/createDb.js",
     "db:drop": "node ./config/tasks/dropDb.js",
-    "db:setup:dev": "node ./config/tasks/insertTestData.js"
+    "db:insert:testData": "node ./config/tasks/insertTestData.js",
+    "db:setup:dev": "npm run db:drop && npm run db:create && node ./config/tasks/insertTestData.js"
   },
   "dependencies": {
     "body-parser": "~1.14.2",
@@ -18,11 +19,13 @@
     "express-validator": "^2.18.0",
     "glob": "^6.0.4",
     "hbs": "^4.0.0",
+    "mime": "^1.3.4",
     "nconf": "^0.8.2",
     "node-uuid": "^1.4.7",
     "q": "^1.4.1",
     "request-promise": "^1.0.2",
     "rethinkdb": "^2.2.1",
+    "util": "^0.10.3",
     "xmldom": "^0.1.19",
     "xpath": "0.0.9"
   },

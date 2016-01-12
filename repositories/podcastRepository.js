@@ -1,7 +1,5 @@
 var fs = require('fs');
 var path = require('path');
-var Q = require('q');
-var uuid = require('node-uuid');
 var r = require('rethinkdb');
 
 var Config = require('../services/configService');
@@ -19,6 +17,12 @@ module.exports = {
 };
 
 function save(newEntity) {
+    if(!newEntity.createdAt) {
+        newEntity.createdAt = r.now();
+    } else {
+        newEntity.updatedAt = r.now();
+    }
+
     return r.table(Config.get('db:table')).getAll(newEntity.url, {index: 'url'}).run(conn)
         .then(cursor => cursor.toArray())
         .then(results => {
@@ -33,7 +37,8 @@ function save(newEntity) {
         })
         .then(res => {
             return res.changes[0].new_val;
-        });
+        })
+        .catch(err => console.error(err));
 }
 
 /**
@@ -53,6 +58,7 @@ function findById(id) {
 
 function findAll() {
     return r.table(Config.get('db:table'))
+        .orderBy('createdAt')
         .run(conn)
         .then(cursor => cursor.toArray());
 }

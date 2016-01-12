@@ -1,7 +1,9 @@
 var DOMParser = require('xmldom').DOMParser;
 var xpath = require('xpath');
 var request = require('request-promise');
+var util = require('util');
 var Q = require('q');
+var mime = require('mime');
 select = xpath.useNamespaces({"itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd"});
 
 var podcastRepository = require('../repositories/podcastRepository');
@@ -14,13 +16,10 @@ module.exports = {
 };
 
 function add(feedUrl) {
-    var entity = {
-        url: feedUrl
-    };
-
     return getFeedContent(feedUrl)
         .then(resp => createPodcastEntity(resp, feedUrl))
-        .then(entity => podcastRepository.save(entity));
+        .then(entity => podcastRepository.save(entity))
+        .catch(err => console.error(err));
 }
 
 function getFeedContent(feedUrl) {
@@ -29,12 +28,38 @@ function getFeedContent(feedUrl) {
 }
 
 function createPodcastEntity(xml, feedUrl) {
-    return {
-        title: getValue(xml, '//title'),
-        image: getAttribute(xml, '//itunes:image', 'href'),
-        url: feedUrl,
-        homepage: getValue(xml, '//link')
+    var image;
+
+    return getImage(xml)
+        .then(_img => image = _img)
+        .then(() => {
+            return {
+                title: getValue(xml, '//title'),
+                image: image,
+                url: feedUrl,
+                homepage: getValue(xml, '//link')
+            };
+        });
+}
+
+function getImage(xml) {
+    var deferred = Q.defer();
+    var imageUrl = getValue(xml, '//image/url') || getAttribute(xml, '//itunes:image', 'href');
+    var options = {
+        method: 'GET',
+        url: imageUrl,
+        encoding: null
     };
+
+    request(options, function callback(error, response, body) {
+        var data;
+        if (!error && response.statusCode == 200) {
+            data = "data:" + response.headers["content-type"] + ";base64," + new Buffer(body).toString('base64');
+        }
+        deferred.resolve(data);
+    });
+
+    return deferred.promise;
 }
 
 function getAttribute(node, path, attr, idx) {
@@ -54,5 +79,3 @@ function getValue(node, path, idx) {
     }
     return value;
 }
-
-
