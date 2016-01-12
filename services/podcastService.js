@@ -10,6 +10,7 @@ var podcastRepository = require('../repositories/podcastRepository');
 
 module.exports = {
     add: add,
+    changefeed: podcastRepository.changefeed,
     truncate: podcastRepository.truncate,
     get: podcastRepository.findById,
     getAll: podcastRepository.findAll
@@ -21,6 +22,7 @@ function add(feedUrl) {
         .then(entity => podcastRepository.save(entity))
         .catch(err => console.error(err));
 }
+
 
 function getFeedContent(feedUrl) {
     return request(feedUrl)

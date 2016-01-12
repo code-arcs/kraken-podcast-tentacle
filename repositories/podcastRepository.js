@@ -13,11 +13,12 @@ module.exports = {
     save: save,
     truncate: truncate,
     findById: findById,
-    findAll: findAll
+    findAll: findAll,
+    changefeed: changefeed
 };
 
 function save(newEntity) {
-    if(!newEntity.createdAt) {
+    if (!newEntity.createdAt) {
         newEntity.createdAt = r.now();
     } else {
         newEntity.updatedAt = r.now();
@@ -61,4 +62,19 @@ function findAll() {
         .orderBy('createdAt')
         .run(conn)
         .then(cursor => cursor.toArray());
+}
+
+function changefeed(socket) {
+    return r.table(Config.get('db:table'))
+        .changes()
+        .run(conn)
+        .then(function (cursor) {
+            cursor.each(function (err, item) {
+                if(err) console.error(err);
+                socket.emit('podcast:changed', item.new_val);
+            });
+        })
+        .error(function (err) {
+            console.log("Error:", err);
+        });
 }

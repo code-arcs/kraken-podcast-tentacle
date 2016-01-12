@@ -25,6 +25,7 @@
     "q": "^1.4.1",
     "request-promise": "^1.0.2",
     "rethinkdb": "^2.2.1",
+    "socket.io": "^1.4.4",
     "util": "^0.10.3",
     "xmldom": "^0.1.19",
     "xpath": "0.0.9"
