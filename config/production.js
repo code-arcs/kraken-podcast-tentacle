@@ -2,7 +2,7 @@ var path = require('path');
 
 module.exports = {
     server: {
-        port: 3000
+        port: 3001
     },
     db: {
         port: 28015,
