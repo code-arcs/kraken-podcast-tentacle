@@ -12,34 +12,22 @@
     <link href='css/podcasts.css' rel='stylesheet' type='text/css'>
     <link href='../node_modules/tether/dist/css/tether.min.css' rel='stylesheet' type='text/css'>
     <link href='../node_modules/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='../node_modules/font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <div class="podcasts view">
         <nav class="navbar navbar-fixed-top navbar-light bg-faded">
             <a class="navbar-brand" href="#">Podcasts</a>
             <ul class="nav navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
             </ul>
             <form class="form-inline pull-xs-right">
-                <input class="form-control" type="text" placeholder="Search">
-                <button class="btn btn-success-outline" type="submit">Search</button>
+                <button class="btn btn-success-outline" type="submit"><i class="fa fa-plus"></i></button>
+                <input class="form-control" type="text" placeholder="Search in Podcasts...">
+                <button class="btn btn-success-outline" type="submit"><i class="fa fa-search"></i></button>
             </form>
         </nav>
 
-        <div class="container" id="podcasts">
-            <div class="tiles"></div>
-        </div>
+        <div id="podcasts"></div>
     </div>
 
 

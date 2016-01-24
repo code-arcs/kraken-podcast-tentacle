@@ -8,20 +8,27 @@
     var PodcastTile = React.createClass({
         render () {
             var style = {
-                backgroundImage: 'url(' + this.props.podcast.image + ')'
+                backgroundImage: 'url(' + this.props.podcast.image +')'
             };
 
             return (
-                <a className="podcast-tile" href={this.props.podcast.homepage}>
-                    <div className="cover" style={style}></div>
-                    <div className="title">{this.props.podcast.title}</div>
-                </a>
+                <div className="card card-podcast">
+                    <div className="card-block">
+                        <h4 className="card-title">{this.props.podcast.title}</h4>
+                        <h6 className="card-subtitle text-muted">{this.props.podcast.createdAt}</h6>
+                    </div>
+                    <div style={style} className="cover-image"></div>
+                    <div className="card-block text-xs-right">
+                        <a href={this.props.podcast.homepage} className="btn"><i className="fa fa-home"></i></a>
+                        <a href="#" className="btn btn-primary"><i className="fa fa-comment"></i></a>
+                    </div>
+                </div>
             )
         }
     });
 
     var PodcastList = React.createClass({
-        getInitialState () {
+        getInitialState() {
             return {
                 podcasts: []
             };
@@ -62,7 +69,8 @@
     });
 
     ReactDOM.render(
-        <PodcastList />,
+        <PodcastList />
+        ,
         document.getElementById('podcasts')
     );
 })();

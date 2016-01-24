@@ -18948,13 +18948,36 @@ module.exports = require('./lib/React');
             };
 
             return React.createElement(
-                'a',
-                { className: 'podcast-tile', href: this.props.podcast.homepage },
-                React.createElement('div', { className: 'cover', style: style }),
+                'div',
+                { className: 'card card-podcast' },
                 React.createElement(
                     'div',
-                    { className: 'title' },
-                    this.props.podcast.title
+                    { className: 'card-block' },
+                    React.createElement(
+                        'h4',
+                        { className: 'card-title' },
+                        this.props.podcast.title
+                    ),
+                    React.createElement(
+                        'h6',
+                        { className: 'card-subtitle text-muted' },
+                        this.props.podcast.createdAt
+                    )
+                ),
+                React.createElement('div', { style: style, className: 'cover-image' }),
+                React.createElement(
+                    'div',
+                    { className: 'card-block text-xs-right' },
+                    React.createElement(
+                        'a',
+                        { href: this.props.podcast.homepage, className: 'btn' },
+                        React.createElement('i', { className: 'fa fa-home' })
+                    ),
+                    React.createElement(
+                        'a',
+                        { href: '#', className: 'btn btn-primary' },
+                        React.createElement('i', { className: 'fa fa-comment' })
+                    )
                 )
             );
         }
