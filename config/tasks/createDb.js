@@ -1,7 +1,6 @@
 var r = require('rethinkdb');
 
 var Config = require('../../services/configService');
-
 r.connect(Config.get('db'))
     .then(_conn => conn = _conn)
     .then(() => r.tableCreate(Config.get('db:table')).run(conn))

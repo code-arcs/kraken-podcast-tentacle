@@ -1,63 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
     <title>Title</title>
+
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <style>
-        .podcast-tile {
-            font-family: 'Open Sans', sans-serif;
-            text-decoration: none;
-            color: #000;
-
-            width: 200px;
-            float: left;
-            margin: 0 12px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .podcast-tile .cover {
-            height: 200px;
-            margin: 0 auto;
-            border: 1px solid rgba(0, 0, 0, .2);
-            box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
-            background-size: cover;
-        }
-
-        .podcast-tile .title {
-            font-size: .8rem;
-            text-overflow: ellipsis;
-            text-align: center;
-            white-space: nowrap;
-            bottom: 0;
-            left: 0;
-            font-weight: 400;
-            padding: 7px 5px;
-        }
-
-        .input-group {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-    </style>
+    <link href='css/podcasts.css' rel='stylesheet' type='text/css'>
+    <link href='../node_modules/tether/dist/css/tether.min.css' rel='stylesheet' type='text/css'>
+    <link href='../node_modules/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<div class="podcasts view">
-    <h1>Podcasts</h1>
-    <div class="input-group">
-        <form id="form-add-podcast">
-            <input type="text" class="input-podcast-url" placeholder="Podcast Feed Url...">
-            <input type="submit" value="Go!">
-        </form>
+    <div class="podcasts view">
+        <nav class="navbar navbar-fixed-top navbar-light bg-faded">
+            <a class="navbar-brand" href="#">Podcasts</a>
+            <ul class="nav navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+            <form class="form-inline pull-xs-right">
+                <input class="form-control" type="text" placeholder="Search">
+                <button class="btn btn-success-outline" type="submit">Search</button>
+            </form>
+        </nav>
+
+        <div class="container" id="podcasts">
+            <div class="tiles"></div>
+        </div>
     </div>
 
-    <div class="tiles"></div>
-</div>
 
-<script src="https://cdn.socket.io/socket.io-1.4.3.js"></script>
-<script src="vendors/jquery.min.js"></script>
-<script src="js/app.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/tether/dist/js/tether.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/socket.io-client/socket.io.js"></script>
+
+    <script src="js/bundle.js"></script>
+
 </body>
 </html>

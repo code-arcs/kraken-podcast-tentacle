@@ -67,14 +67,5 @@ function findAll() {
 function changefeed(socket) {
     return r.table(Config.get('db:table'))
         .changes()
-        .run(conn)
-        .then(function (cursor) {
-            cursor.each(function (err, item) {
-                if(err) console.error(err);
-                socket.emit('podcast:changed', item.new_val);
-            });
-        })
-        .error(function (err) {
-            console.log("Error:", err);
-        });
+        .run(conn);
 }

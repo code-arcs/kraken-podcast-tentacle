@@ -2,6 +2,6 @@ var path = require('path');
 
 module.exports = {
     db: {
-        host: '192.168.99.100'
+        host: '192.168.2.101'
     }
 };

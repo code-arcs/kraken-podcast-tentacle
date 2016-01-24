@@ -1,48 +1,63 @@
-var express = require('express');
-var app = express();
-var path = require('path');
-var expressValidator = require('express-validator');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var glob = require('glob');
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
-var Request = require('request-promise');
+'use strict';
+const express = require('express');
+const app = express();
+const path = require('path');
+const expressValidator = require('express-validator');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const glob = require('glob');
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
+const fs = require('fs');
+const Request = require('request-promise');
 
-var Config = require('./services/configService');
+const Config = require('./services/configService');
+const serviceSecret = fs.readFileSync('./.pid', 'utf8');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(expressValidator());
 app.use(cookieParser());
 app.use('/_views', express.static(path.join(__dirname, 'public')));
+app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
 
 glob.sync('./routes/**/*.js').forEach(route => {
     app.use('/', require(route)(io));
 });
 
-var server = http.listen(Config.get('server:port'), function () {
-    var host = server.address().address;
-    var port = server.address().port;
+const server = http.listen(Config.get('server:port'), function () {
+    let host = server.address().address;
+    let port = server.address().port;
     console.log('Server listening at http://%s:%s', host, port);
 
-    var requestOptions = {
+    let requestOptions = {
         method: "POST",
         uri: 'http://127.0.0.1:3000/register',
-        body: {
-            prefix: '/podcasts',
-            host: server.address().address || '127.0.0.1',
-            port: port
-        },
         json: true
     };
+
+    if(serviceSecret) {
+        requestOptions.body = {
+            secret: serviceSecret
+        };
+    } else {
+        requestOptions.body = {
+            prefix: '/podcasts',
+            host: host || '127.0.0.1',
+            port: port
+        };
+    }
+
     Request(requestOptions)
-        .then(resp => console.log(resp))
-        .catch(err => console.error('Service could not be registered!'));
+        .then(resp => fs.writeFileSync('./.pid', resp, 'utf8'))
+        .catch(err => console.error('Service could not be registered!', err.error));
 });
 
-var gracefulShutdown = function () {
-    server.close(deregisterService);
+function gracefulShutdown() {
+    console.log('gracefulShutdown');
+
+    deregisterService()
+        .then(() => server.close());
 
     setTimeout(function killItAnyways() {
         console.error("Could not close connections in time, forcefully shutting down");
@@ -51,11 +66,13 @@ var gracefulShutdown = function () {
     }, 10 * 1000);
 
     function deregisterService() {
-        var requestOptions = {
+        console.log('deregisterService', server.serviceSecret);
+
+        let requestOptions = {
             method: "POST",
             uri: 'http://127.0.0.1:3000/unregister',
             body: {
-                prefix: '/podcasts'
+                secret: serviceSecret
             },
             json: true
         };
@@ -64,7 +81,7 @@ var gracefulShutdown = function () {
             .then(resp => console.log(resp))
             .catch(err => console.error('Service could not be unregistered!'));
     }
-};
+}
 
 process.on('SIGTERM', gracefulShutdown);
 process.on('SIGINT', gracefulShutdown);
