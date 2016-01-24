@@ -6,12 +6,15 @@
     "start": "node server.js",
     "test": "NODE_ENV=test mocha --reporter spec ./test/**/*.spec.js",
     "test-it": "NODE_ENV=test mocha --reporter spec ./test/**/*.spec.it.js",
+    "babelify": "browserify -t [ babelify --presets [ react ] ] public/js/main.js -o public/js/bundle.js",
     "db:create": "node ./config/tasks/createDb.js",
     "db:drop": "node ./config/tasks/dropDb.js",
     "db:insert:testData": "node ./config/tasks/insertTestData.js",
     "db:setup:dev": "npm run db:drop && npm run db:create && node ./config/tasks/insertTestData.js"
   },
   "dependencies": {
+    "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0",
     "body-parser": "~1.14.2",
     "cookie-parser": "~1.4.0",
     "cron": "^1.1.0",
@@ -23,6 +26,8 @@
     "nconf": "^0.8.2",
     "node-uuid": "^1.4.7",
     "q": "^1.4.1",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
     "request-promise": "^1.0.2",
     "rethinkdb": "^2.2.1",
     "socket.io": "^1.4.4",
@@ -31,8 +36,12 @@
     "xpath": "0.0.9"
   },
   "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.2",
     "expect.js": "^0.3.1",
+    "jquery": "^2.2.0",
     "really-need": "^1.9.0",
-    "supertest": "^1.1.0"
+    "socket.io-client": "^1.4.4",
+    "supertest": "^1.1.0",
+    "tether": "^1.1.1"
   }
 }
