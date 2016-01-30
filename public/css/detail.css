@@ -1,0 +1,8 @@
+.podcast-detail {
+
+}
+
+.podcast-detail__cover {
+    float: right;
+    margin: 0 0 10px 10px;
+}

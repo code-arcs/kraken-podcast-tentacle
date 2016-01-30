@@ -8,10 +8,11 @@ module.exports = function (io) {
         podcastService.changefeed(socket)
             .then(function (cursor) {
                 cursor.each(function (err, item) {
-                    if (err) console.error(err);
-                    if(!item.new_val) {
+                    if (err) return console.error(err);
+                    if (item && item.old_val) {
                         socket.emit('podcast:deleted', item.old_val.id);
-                    } else {
+                    }
+                    if (item && item.new_val) {
                         socket.emit('podcast:added', item.new_val);
                     }
                 });
@@ -33,6 +34,24 @@ module.exports = function (io) {
     router.get('/podcasts/:id', (req, res) => {
         podcastService.get(req.params.id)
             .then(resp => res.send(resp))
+            .catch(err => {
+                console.error(err);
+                res.status(500).send(err.message);
+            });
+    });
+
+    router.get('/podcasts/:id/items', (req, res) => {
+        podcastService.getItems(req.params.id)
+            .then(resp => res.send(resp))
+            .catch(err => {
+                console.error(err);
+                res.status(500).send(err.message);
+            });
+    });
+
+    router.get('/podcasts/:id/image/:size?', (req, res) => {
+        podcastService.getImage(req.params.id, req.params.size)
+            .then(resp => res.sendFile(resp, {root: './'}))
             .catch(err => {
                 console.error(err);
                 res.status(500).send(err.message);
