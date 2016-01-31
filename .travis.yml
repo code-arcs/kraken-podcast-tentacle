@@ -2,7 +2,7 @@ language: node_js
 env:
  - db__host=127.0.0.1
 before_install:
-  - "echo \"deb http://download.rethinkdb.com/apt $DISTRIB_CODENAME main\" | sudo tee /ect/apt/sources.list.d/rethinkdb.list"
+  - "echo \"deb http://download.rethinkdb.com/apt trusty main\" | sudo tee /ect/apt/sources.list.d/rethinkdb.list"
   - "wget -qO- http://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -"
   - "sudo apt-get update"
 before_script:
