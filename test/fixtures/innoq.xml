@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+    <channel>
+        <title>innoQ Podcast</title>
+        <description>Im innoQ Podcast diskutieren wir in unregelmäßigen Abständen interessante Themen aus Software-Entwicklung und -Architektur – in der Tiefe und mit Fokus auf Praxistauglichkeit.</description>
+        <link>https://www.innoq.com/de/podcast/</link>
+        <language>de-de</language>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike Unported 3.0 License.</copyright>
+        <itunes:subtitle>Interessante Gespräche aus Software-Entwicklung und Architektur</itunes:subtitle>
+        <itunes:author>innoQ</itunes:author>
+        <itunes:summary>Im innoQ Podcast diskutieren wir in unregelmäßigen Abständen interessante Themen aus Software-Entwicklung und -Architektur – in der Tiefe und mit Fokus auf Praxistauglichkeit.</itunes:summary>
+        <itunes:owner>
+            <itunes:name>innoQ</itunes:name>
+            <itunes:email>podcast@innoq.com</itunes:email>
+        </itunes:owner>
+        <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+        <itunes:category text="Technology">
+            <itunes:category text="Software How-To"/>
+        </itunes:category>
+        <itunes:explicit>no</itunes:explicit>
+        <item>
+            <title>Redis in der Praxis</title>
+            <link>https://www.innoq.com/de/podcast/023-redis/</link>
+            <pubDate>Thu, 07 Jan 2016 00:00:00 +0100</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Überblick und praktischer Einsatz des schnellen Datenstruktur-Servers</itunes:subtitle>
+            <itunes:summary>In dieser Episode unterhalten sich Lucas Dohmen und Stefan Tilkov über Redis, eine NoSQL-Datenbank aus der Key-Value-Kategorie, die sich insbesondere durch ihre hohe Geschwindigkeit und ihre intelligenten Datenstrukturen auszeichnet. Dabei werden nicht nur die Features aufgezählt, sondern auch praktische Hinweise zum Einsatz gegeben.  </itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/023-redis.m4a" length="39599408" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/023-redis.m4a</guid>
+            <itunes:duration>2435</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>In dieser Episode unterhalten sich Lucas Dohmen und Stefan Tilkov über Redis, eine NoSQL-Datenbank aus der Key-Value-Kategorie, die sich insbesondere durch ihre hohe Geschwindigkeit und ihre intelligenten Datenstrukturen auszeichnet. Dabei werden nicht nur die Features aufgezählt, sondern auch praktische Hinweise zum Einsatz gegeben.  </p><p>In dieser Folge sprechen wir über Redis, den Datenstrukturserver. Die Themen:</p>
+
+<ul>
+<li>
+<a href="http://redis.io/">Redis</a> eingeordnet in der NoSQL Welt</li>
+<li>Der Redis-Erfinder heißt <a href="http://antirez.com">Salvatore Sanfilippo</a>,
+ es wird aber oft nur sein „Handle“ genannt: <a href="https://twitter.com/antirez">antirez</a>
+</li>
+<li>Redis als Key/Value Store – aber mit optionaler <a href="http://redis.io/topics/persistence">Persistenz</a>
+</li>
+<li>Die <a href="http://redis.io/topics/data-types-intro">Datentypen</a> von Redis</li>
+<li>Wie schnell ist Redis? <a href="http://redis.io/topics/benchmarks">Benchmarks</a>
+</li>
+<li>Redis im Praxiseinsatz</li>
+<li>Interprozess Kommunikation mit Queues und <a href="http://redis.io/topics/pubsub">PubSub</a> in Redis
+
+<ul>
+<li>Redis Listen lassen sich als Queue verwenden mit <a href="http://redis.io/commands/rpop">rpop</a> und <a href="http://redis.io/commands/lpush">lpush</a>
+</li>
+<li>Das <a href="http://redis.io/commands/rpoplpush#pattern-reliable-queue">Reliable Queue Pattern</a> in Redis</li>
+<li>Lucas’ kleine Node.js Queue Lib <a href="https://github.com/moonglum/kute">kute</a> (im README mehr über Redis als Queue)</li>
+<li>Salvatores verteilte Job Queue als Antwort auf die Verwendung von Redis als Job Queue: <a href="https://github.com/antirez/disque">disque</a>
+</li>
+</ul>
+</li>
+<li><a href="http://redis.io/topics/transactions">Transaktionen</a></li>
+<li>
+<a href="http://redis.io/topics/replication">Replikation</a>, <a href="http://redis.io/topics/sentinel">Sentinel</a>
+</li>
+<li>
+<a href="http://redis.io/topics/cluster-tutorial">Redis Cluster</a> und Sharding</li>
+<li><a href="https://github.com/aphyr/jepsen">Jepsen</a></li>
+<li>Kyle Kingsbury analysiert Redis:
+    * <a href="https://aphyr.com/posts/283-jepsen-redis">1. Mal</a>
+    * <a href="https://aphyr.com/posts/307-jepsen-redis-redux">2. Mal</a>
+</li>
+<li>
+<a href="http://www.lua.org/">Lua</a> und <a href="http://redis.io/commands/eval">wie man es in Redis benutzt</a>
+</li>
+<li>
+<a href="https://github.com/soveran/ohm">Ohm</a>: Der Object Hash Mapper von <a href="https://github.com/soveran/">Michel Martens</a>
+</li>
+<li>
+<a href="https://github.com/elcuervo/minuteman">Minuteman</a>: Analytics mit Redis von <a href="https://github.com/elcuervo">Bruno Aguirre</a>
+</li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>REST und HTTP </title>
+            <link>https://www.innoq.com/de/podcast/022-rest-und-http/</link>
+            <pubDate>Mon, 10 Aug 2015 00:00:00 +0200</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Die dritte Auflage ist endlich da!</itunes:subtitle>
+            <itunes:summary>In dieser Folge spricht Stefan Tilkov mit seinen neuen Co-Autoren Martin Eigenbrodt, Silvia Schreier und Oliver Wolf anlässlich der kürzlich erschienenen dritten Auflage von „REST und HTTP“ über die Grundlagen von REST und Hypermedia und die Frage, wie man gute Web-Anwendungen baut.</itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/022-rest-und-http.m4a" length="51796662" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/022-rest-und-http.m4a</guid>
+            <itunes:duration>3188</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>In dieser Folge spricht Stefan Tilkov mit seinen neuen Co-Autoren Martin Eigenbrodt, Silvia Schreier und Oliver Wolf anlässlich der kürzlich erschienenen dritten Auflage von „REST und HTTP“ über die Grundlagen von REST und Hypermedia und die Frage, wie man gute Web-Anwendungen baut.</p><ul>
+<li><a href="http://rest-http.info/">REST und HTTP</a></li>
+<li><a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">Dissertation von Roy Fielding</a></li>
+<li><a href="https://tools.ietf.org/html/rfc4287">Atom Syndication Format</a></li>
+<li><a href="http://stateless.co/hal_specification.html">HAL</a></li>
+<li><a href="https://github.com/kevinswiber/siren">SIREN</a></li>
+<li><a href="http://amundsen.com/media-types/collection/">Colllection+JSON</a></li>
+<li><a href="https://tools.ietf.org/html/rfc5023">Atom Publishing Protocol</a></li>
+<li><a href="https://www.playframework.com/">Play</a></li>
+<li><a href="http://rubyonrails.org/">Rails</a></li>
+<li><a href="http://jcp.org/en/jsr/detail?id=311">JAX-RS</a></li>
+<li><a href="http://spray.io/">Spray</a></li>
+<li><a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html">Spring MVC</a></li>
+<li>Vortrag von Jon Moore auf der <a href="http://gotocon.com/berlin-2013/presentation/Building%20Hypermedia%20APIs%20with%20HTML">GOTO Berlin</a> bzw. <a href="http://www.infoq.com/presentations/web-api-html">QCon</a>
+</li>
+<li><a href="http://roca-style.org/">ROCA</a></li>
+<li><a href="https://tools.ietf.org/html/rfc7230">Neue HTTP/1.1-RFCs</a></li>
+<li><a href="https://tools.ietf.org/html/draft-ietf-httpbis-http2-00">SPDY</a></li>
+<li><a href="https://tools.ietf.org/html/rfc7540">HTTP/2-RFC</a></li>
+<li><a href="http://daniel.haxx.se/http2/">HTTP/2 explained</a></li>
+<li><a href="http://swagger.io/">Swagger</a></li>
+<li><a href="http://raml.org/">RAML</a></li>
+<li><a href="https://apiblueprint.org/">API Blueprint</a></li>
+<li><a href="https://tools.ietf.org/rfc/rfc5849">OAuth 1</a></li>
+<li><a href="https://tools.ietf.org/rfc/rfc6749">OAuth 2</a></li>
+<li><a href="http://openid.net/connect/">OpenID Connect</a></li>
+<li><a href="https://www.innoq.com/de/talks/2015/04/oauth2-openid-connect-jax2015/">Vortrag zu OAuth2 und OpenID Connect</a></li>
+<li><a href="https://github.com/mikekelly/hal_specification/wiki/Libraries">HAL-Bibliotheken</a></li>
+<li><a href="https://github.com/mikekelly/hal-browser">HAL-Browser</a></li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>Erlang/OTP</title>
+            <link>https://www.innoq.com/de/podcast/021-erlang/</link>
+            <pubDate>Fri, 17 Jul 2015 00:00:00 +0200</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Eine Programmiersprache für non-stop laufende Systeme</itunes:subtitle>
+            <itunes:summary>In dieser Folge spricht Till Schulte-Coerne mit Christoph Iserlohn über Erlang, eine Programmiersprache und Laufzeitumgebung, die sich besonders zur Erstellung von non-stop laufenden Systemen eignet. Sie diskutieren dabei u. a. die Unterschiede zu anderen Programmiersprachen, die Besonderheiten der Laufzeitumgebung, das „ Let it crash“-Prinzip und was sich eigentlich hinter dem Kürzel OTP verbirgt.</itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/021-erlang.m4a" length="53553341" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/021-erlang.m4a</guid>
+            <itunes:duration>3296</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>In dieser Folge spricht Till Schulte-Coerne mit Christoph Iserlohn über Erlang, eine Programmiersprache und Laufzeitumgebung, die sich besonders zur Erstellung von non-stop laufenden Systemen eignet. Sie diskutieren dabei u. a. die Unterschiede zu anderen Programmiersprachen, die Besonderheiten der Laufzeitumgebung, das „ Let it crash“-Prinzip und was sich eigentlich hinter dem Kürzel OTP verbirgt.</p><ul>
+<li><a href="http://erlang.org">Erlang Homepage</a></li>
+<li><a href="https://www.youtube.com/watch?v=xrIjfIjssLE">Erlang: The Movie</a></li>
+<li><a href="http://learnyousomeerlang.com">Learn You Some Erlang for great good!</a></li>
+<li><a href="http://mostlyerlang.com/">Mostly Erlang podcast</a></li>
+<li><a href="http://yaws.hyber.org/">Yaws Webserver</a></li>
+<li><a href="https://www.sics.se/~joe/apachevsyaws.html">Apache vs. Yaws</a></li>
+<li><a href="http://www.planeterlang.com/">Planet Erlang</a></li>
+<li><a href="https://erlangcentral.org/category/videos/">Erlang Central videos</a></li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>Logging und Metrics</title>
+            <link>https://www.innoq.com/de/podcast/020-logging-metrics/</link>
+            <pubDate>Tue, 09 Jun 2015 00:00:00 +0200</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Moderne Ansätze zur Überwachung von verteilten Systemen</itunes:subtitle>
+            <itunes:summary>In der zwanzigsten Folge unseres Podcasts spricht Tammo van Lessen mit Stefan Tilkov über modernes Logging und Monitoring. Durch DevOps ist einige Bewegung in die Welt des verteilten Monitorings von Anwendungen gekommen. Aus dem Hashtag #monitoringsucks wurde dank neuer Werkzeuge recht schnell #monitoringlove. Tammo stellt einige dieser Ansätze und Tools für gutes Logging und die Erfassung von Metriken in verteilten Umgebungen vor.</itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/020-logging-metrics.m4a" length="32841064" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/020-logging-metrics.m4a</guid>
+            <itunes:duration>2019</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>In der zwanzigsten Folge unseres Podcasts spricht Tammo van Lessen mit Stefan Tilkov über modernes Logging und Monitoring. Durch DevOps ist einige Bewegung in die Welt des verteilten Monitorings von Anwendungen gekommen. Aus dem Hashtag #monitoringsucks wurde dank neuer Werkzeuge recht schnell #monitoringlove. Tammo stellt einige dieser Ansätze und Tools für gutes Logging und die Erfassung von Metriken in verteilten Umgebungen vor.</p><h4><a id="logging" href="#logging">Logging</a></h4>
+
+<ul>
+<li><a href="http://logging.apache.org/log4j/2.x/">Log4j 2.0</a></li>
+<li>MDCs aka <a href="http://logging.apache.org/log4j/2.x/manual/thread-context.html">ThreadContext in Log4j2</a>
+</li>
+<li>ELK-Stack: <a href="https://www.elastic.co/products/elasticsearch">ElasticSearch</a>, <a href="https://www.elastic.co/products/logstash">Logstash</a> &amp; <a href="https://www.elastic.co/products/kibana">Kibana</a>.</li>
+<li>Alternativen zu Logstash:</li>
+<li>Open Source: <a href="http://flume.apache.org/">Apache Flume</a>, <a href="http://www.fluentd.org/">fluentd</a>, <a href="https://www.graylog.org/">Graylog</a>
+</li>
+<li>Kommerziell: <a href="http://www.splunk.com/">Splunk</a>, <a href="https://www.loggly.com/">Loggly</a>
+</li>
+</ul>
+
+<h4><a id="metriken" href="#metriken">Metriken</a></h4>
+
+<ul>
+<li><a href="https://dropwizard.github.io/metrics/3.1.0/">Dropwizard Metrics</a></li>
+<li>
+<a href="http://graphite.wikidot.com/">Graphite</a> – <a href="http://influxdb.com/">InfluxDB</a> ist eine aufkommende Alternative.</li>
+<li><a href="https://github.com/etsy/statsd">statsd</a></li>
+<li><a href="http://sirona.incubator.apache.org/">Apache Sirona</a></li>
+<li><a href="http://riemann.io/">Riemann</a></li>
+</ul>
+
+<h4><a id="weiterequellen" href="#weiterequellen">Weitere Quellen</a></h4>
+
+<ul>
+<li>Heusingfeld, Alexander: <a href="https://www.innoq.com/en/blog/per-request-debugging-with-log4j2/">Per request debugging with Log4j 2 filters</a>. Blogpost, 2015.</li>
+<li>van Lessen, Tammo &amp; Alexander Heusingfeld: <a href="https://www.innoq.com/de/talks/2015/04/jax-2015-logging-metriken-microservices/">Wider den Blindflug: Logging und Metriken in verteilten Anwendungen</a>, Vortrag, JAX, 2015.</li>
+<li>Bodewig, Stefan &amp; Ghadir, Phillip: <a href="https://www.innoq.com/de/articles/2015/01/logging-konsolidieren-log4j2/">Logging konsolidieren und Performance gewinnen – Performance, Durchsatz und Integrität</a>. Artikel. 2015</li>
+<li>van Lessen, Tammo: <a href="https://www.innoq.com/de/articles/2014/11/wissen-was-laeuft/">Wissen, was läuft – Mit Laufzeitmetriken den Überblick behalten</a>. Artikel. 2014.</li>
+<li>Hale, Coda: <a href="https://www.youtube.com/watch?v=czes-oa0yik">Metrics, metrics everywhere</a>, Presentation, Youtube, 2012.</li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>DevOps</title>
+            <link>https://www.innoq.com/de/podcast/019-devops/</link>
+            <pubDate>Thu, 21 May 2015 00:00:00 +0200</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Was bedeutet das für die Organisation?</itunes:subtitle>
+            <itunes:summary>Oliver Wolf und Stefan Tilkov sprechen in dieser Folge über die engere Verzahnung von Softwareentwicklung und Betrieb, auch DevOps genannt. Sie beleuchten Vorteile und organisatorische Herausforderungen dieser Vorgehensweise. Außerdem geht es auch darum, wie man interne Widerstände überwinden kann, um DevOps auch in traditionell strukturierten Organisationen einzuführen.
+            </itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/019-devops.m4a" length="34090784" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/019-devops.m4a</guid>
+            <itunes:duration>2094</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>Oliver Wolf und Stefan Tilkov sprechen in dieser Folge über die engere Verzahnung von Softwareentwicklung und Betrieb, auch DevOps genannt. Sie beleuchten Vorteile und organisatorische Herausforderungen dieser Vorgehensweise. Außerdem geht es auch darum, wie man interne Widerstände überwinden kann, um DevOps auch in traditionell strukturierten Organisationen einzuführen.
+ </p><h4><a id="klarstellung:-" href="#klarstellung:-">Klarstellung :-)</a></h4>
+
+<p>Stefan hatte natürlich völlig Recht – “Continuous Delivery” bezeichnet die grundsätzliche Möglichkeit, den aktuellen Stand der Software jederzeit in die Produktion deployen zu können (ohne es tatsächlich auch zwangsläufig immer zu tun), während “Continuous Deployment” bedeutet, tatsächlich kontinuierlich das Produktivsystem zu aktualisieren. Ich bitte, die Begriffsverwirrung zu entschuldigen. (Oliver)</p>
+
+<h4><a id="wieallesanfing" href="#wieallesanfing">Wie alles anfing</a></h4>
+
+<ul>
+<li><a href="http://www.jedi.be/blog/">Blog von Patrick Debois</a></li>
+</ul>
+
+<h4><a id="artikel" href="#artikel">Artikel</a></h4>
+
+<ul>
+<li><a href="https://www.innoq.com/de/articles/2012/10/wider-betonkoepfe-und-freigeister/">Wider Betonköpfe und Freigeister</a></li>
+</ul>
+
+<h4><a id="bücher" href="#b%C3%BCcher">Bücher</a></h4>
+
+<ul>
+<li><a href="http://www.amazon.de/dp/3864902088">Buch von Eberhard Wolff</a></li>
+<li><a href="http://www.amazon.de/dp/0321601912">Buch von Jez Humble</a></li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>Twelve-Factor App: Web-Applikationen auf die neue Art</title>
+            <link>https://www.innoq.com/de/podcast/018-twelve-factor-app/</link>
+            <pubDate>Wed, 08 Apr 2015 00:00:00 +0200</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Ein Ansatz für skalierbare, portable und leicht deploybare Web-Applikationen in der Cloud</itunes:subtitle>
+            <itunes:summary>Michael Vitz und Stefan Tilkov sprechen in dieser Folge über die Twelve-Factor App, eine Entwicklungsmethode für skalierbare Web-Applikationen in der Cloud. Michael erklärt zunächst, welche Ziele hinter dieser Methode stehen und erläutert dann die 12 Faktoren im Detail. Außerdem diskutieren Stefan und Michael über Vor- und Nachteile der Twelve-Factor App und beleuchten Gemeinsamkeiten und Unterschiede zu Microservices.
+            </itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/018-twelve-factor-app.m4a" length="37053408" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/018-twelve-factor-app.m4a</guid>
+            <itunes:duration>2280</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>Michael Vitz und Stefan Tilkov sprechen in dieser Folge über die Twelve-Factor App, eine Entwicklungsmethode für skalierbare Web-Applikationen in der Cloud. Michael erklärt zunächst, welche Ziele hinter dieser Methode stehen und erläutert dann die 12 Faktoren im Detail. Außerdem diskutieren Stefan und Michael über Vor- und Nachteile der Twelve-Factor App und beleuchten Gemeinsamkeiten und Unterschiede zu Microservices.
+</p><h4><a id="methodik" href="#methodik">Methodik</a></h4>
+
+<ul>
+<li><a href="http://12factor.net">The Twelve-Factor App</a></li>
+<li>Präsentation <a href="http://www.infoq.com/presentations/12-Principles-Deploy-Apps">12 Factor App</a> von Craig Kersteins bei InfoQ</li>
+</ul>
+
+<h4><a id="meinungenkritik" href="#meinungenkritik">Meinungen/Kritik</a></h4>
+
+<ul>
+<li><a href="http://reinout.vanrees.org/weblog/2014/09/17/12factor.html">My take on the “12 factor app”</a></li>
+<li>The Twelve Factor App Review <a href="http://www.digitalsanctuary.com/tech-blog/general/the-twelve-factor-app-review-part-1.html">Part 1</a>/<a href="http://www.digitalsanctuary.com/tech-blog/general/the-twelve-factor-app-review-%E2%80%93-part-2.html">Part 2</a>
+</li>
+<li><a href="http://apprenda.com/blog/paas-should-move-beyond-twelve-factor-app/">Why PaaS Should Move Beyond the ‘Twelve-Factor App’</a></li>
+</ul>
+
+<h4><a id="beispiele" href="#beispiele">Beispiele</a></h4>
+
+<ul>
+<li><a href="http://blog.gopheracademy.com/advent-2013/day-03-building-a-twelve-factor-app-in-go/">Building a Twelve Factor App in Go</a></li>
+<li><a href="http://www.coderanch.com/t/626165/java/java/factor-app-principles-apply-Java">JavaRanch Diskussion über Twelve-Factor App in Java</a></li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>Ruby on Rails</title>
+            <link>https://www.innoq.com/de/podcast/017-ruby-on-rails/</link>
+            <pubDate>Fri, 05 Dec 2014 00:00:00 +0100</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Das Full-Stack-Web-Framework</itunes:subtitle>
+            <itunes:summary>In dieser Folge spricht Robert Glaser mit Stefan Tilkov über das Web-Framework Ruby on Rails. Robert stellt die Hauptbestandteile und aktuellen Neuerungen des Frameworks vor und schildert seine Erfahrungen im täglichen Umgang mit Rails.</itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/017-ruby-on-rails.m4a" length="35797874" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/017-ruby-on-rails.m4a</guid>
+            <itunes:duration>2202</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>In dieser Folge spricht Robert Glaser mit Stefan Tilkov über das Web-Framework Ruby on Rails. Robert stellt die Hauptbestandteile und aktuellen Neuerungen des Frameworks vor und schildert seine Erfahrungen im täglichen Umgang mit Rails.</p><h4><a id="tutorialsknow-howundaktuelles" href="#tutorialsknow-howundaktuelles">Tutorials, Know-How und Aktuelles</a></h4>
+
+<ul>
+<li><a href="http://railsforzombies.org/">Rails for Zombies</a></li>
+<li><a href="http://rails-weekly.goodbits.io">“This Week in Rails” Newsletter</a></li>
+<li><a href="http://guides.rubyonrails.org">Rails Guides</a></li>
+<li><a href="http://www.amazon.de/Agile-Development-Rails-Pragmatic-Programmers/dp/1937785564/ref=sr_1_1?ie=UTF8&amp;qid=1417703700&amp;sr=8-1&amp;keywords=ruby+on+rails">Agile Web Development with Rails 4</a></li>
+</ul>
+
+<h4><a id="neuesinrails4und5" href="#neuesinrails4und5">Neues in Rails 4 und 5</a></h4>
+
+<ul>
+<li><a href="http://guides.rubyonrails.org/4_1_release_notes.html">Rails 4.1 Release Notes</a></li>
+<li><a href="http://guides.rubyonrails.org/4_2_release_notes.html">Rails 4.2 Release Notes</a></li>
+<li><a href="https://github.com/rails/cache_digests">cache_digests aka “Russian Doll Caching”</a></li>
+<li><a href="http://guides.rubyonrails.org/active_job_basics.html">ActiveJob</a></li>
+<li><a href="http://www.justinweiss.com/blog/2014/09/08/rails-5-module-number-prepend-and-the-end-of-alias-method-chain/">Rails 5, Module.prepend, and the End of alias_method_chain</a></li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>Eine Website — viele Geräte</title>
+            <link>https://www.innoq.com/de/podcast/016-responsive-web-design/</link>
+            <pubDate>Mon, 11 Aug 2014 00:00:00 +0200</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Mit Responsive Web-Design Ordnung schaffen</itunes:subtitle>
+            <itunes:summary>Eine Website sollte unabhängig von der Größe des Browser-Fensters funktionieren und ihren Inhalt in optimaler Form darstellen. Dies ist die Grundidee von Responsive Web-Design. Robert Glaser und Roman Stranghöner berichten in dieser Folge von ihren Erfahrungen mit diesem Ansatz sowie von den zu Grunde liegenden Techniken und Ideen.</itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/016-responsive-web-design.m4a" length="46182176" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/016-responsive-web-design.m4a</guid>
+            <itunes:duration>2842</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>Eine Website sollte unabhängig von der Größe des Browser-Fensters funktionieren und ihren Inhalt in optimaler Form darstellen. Dies ist die Grundidee von Responsive Web-Design. Robert Glaser und Roman Stranghöner berichten in dieser Folge von ihren Erfahrungen mit diesem Ansatz sowie von den zu Grunde liegenden Techniken und Ideen.</p><h4><a id="methodiktutorialsundtechnologie" href="#methodiktutorialsundtechnologie">Methodik, Tutorials und Technologie</a></h4>
+
+<ul>
+<li>
+<a href="http://alistapart.com/article/responsive-web-design/">Responsive Web Design</a> A List Apart Artikel von Ethan Marcotte</li>
+<li>
+<a href="http://www.abookapart.com/products/mobile-first">Mobile First</a> A Book Apart Buch von Luke Wroblewski</li>
+<li><a href="http://www.adamkaplan.me/grid/">Grid — A simple guide to responsive design</a></li>
+<li><a href="http://bradfrost.github.io/this-is-responsive/patterns.html">Responsive Patterns</a></li>
+<li><a href="http://patternlab.io">Pattern Lab</a></li>
+<li><a href="http://responsiveimages.org/">Responsive Images Community Group</a></li>
+<li><a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a></li>
+<li><a href="http://www.w3.org/TR/css3-grid-layout/">CSS Grid Layout Module</a></li>
+<li>
+<a href="http://daverupert.com/2014/07/rwd-bloat/">RWD Bloat</a> Artikel von Dave Rupert</li>
+<li>
+<a href="http://daverupert.com/2014/07/rwd-bloat-part-ii/">RWD Bloat Part II</a> Artikel von Dave Rupert</li>
+</ul>
+
+<h4><a id="responsivegridframeworks" href="#responsivegridframeworks">Responsive Grid Frameworks</a></h4>
+
+<ul>
+<li><a href="http://getbootstrap.com/css/#grid">Bootstrap Grid</a></li>
+<li><a href="http://foundation.zurb.com/">Foundation</a></li>
+<li><a href="http://susy.oddbird.net">Susy Grid für Sass</a></li>
+<li><a href="https://github.com/csswizardry/inuit.css/">inuit.css</a></li>
+</ul>
+
+<h4><a id="polyfills" href="#polyfills">Polyfills</a></h4>
+
+<ul>
+<li>
+<a href="http://scottjehl.github.io/picturefill/">picturefill</a> für Responsive Images</li>
+<li>
+<a href="https://github.com/scottjehl/Respond">respond</a> für Media Queries im IE6–8</li>
+</ul>
+
+<h4><a id="hilfsmittelundtools" href="#hilfsmittelundtools">Hilfsmittel und Tools</a></h4>
+
+<ul>
+<li><a href="http://www.browsersync.io">BrowserSync</a></li>
+<li><a href="http://koeln.opendevicelab.de/">Open Device Lab</a></li>
+<li>
+<a href="http://www.browserstack.com/">Browserstack</a> Browsertesting</li>
+<li>
+<a href="https://saucelabs.com/">Sauce Labs</a> Browsertesting</li>
+<li><a href="https://www.npmjs.org/package/grunt-responsive-images">Responsive Images Grunt Task</a></li>
+</ul>
+
+<h4><a id="weiteres" href="#weiteres">Weiteres</a></h4>
+
+<ul>
+<li><a href="http://exisweb.net/menu-eats-hamburger">Hamburger vs Menu: The Final AB Test</a></li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>Wenn Systeme aus dem Ruder laufen</title>
+            <link>https://www.innoq.com/de/podcast/015-hystrix/</link>
+            <pubDate>Fri, 13 Jun 2014 00:00:00 +0200</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Mit Hystrix für stabile, verteilte Anwendungen sorgen</itunes:subtitle>
+            <itunes:summary>In der fünfzehnten Folge unseres Podcasts spricht Arne Landwehr mit Stefan Tilkov über Stabilitäts-Pattern für verteilte Anwendungen und die Bibliothek "Hystrix". Arne erläutert dabei unter anderem, um was es sich bei "Circuit-Breakern" handelt und wie sie uns zu stabileren Systemen führen können.</itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/015-hystrix.m4a" length="27414322" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/015-hystrix.m4a</guid>
+            <itunes:duration>1682</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>In der fünfzehnten Folge unseres Podcasts spricht Arne Landwehr mit Stefan Tilkov über Stabilitäts-Pattern für verteilte Anwendungen und die Bibliothek &quot;Hystrix&quot;. Arne erläutert dabei unter anderem, um was es sich bei &quot;Circuit-Breakern&quot; handelt und wie sie uns zu stabileren Systemen führen können.</p><h4><a id="stabilitäts-pattern:" href="#stabilit%C3%A4ts-pattern:">Stabilitäts-Pattern:</a></h4>
+
+<ul>
+<li><p><a href="http://www.amazon.de/Release-It-Production-Ready-Pragmatic-Programmers/dp/0978739213">Release It!</a></p></li>
+<li><p><a href="http://martinfowler.com/bliki/CircuitBreaker.html">Curcuit Breaker</a></p></li>
+</ul>
+
+<h4><a id="hystrix:" href="#hystrix:">Hystrix:</a></h4>
+
+<ul>
+<li><p><a href="https://github.com/Netflix/Hystrix">Hystrix</a></p></li>
+<li><p><a href="https://github.com/Netflix/Hystrix/wiki">Hystrix-Wiki</a></p></li>
+<li><p><a href="https://github.com/Netflix/Hystrix/wiki/Dashboard">Hystrix-Dashboard</a></p></li>
+<li><p><a href="http://www.parleys.com/play/5250a329e4b0c4f11ec57672/about">Hystrix Talk</a></p></li>
+</ul>
+
+<h4><a id="alternativebibliotheken:" href="#alternativebibliotheken:">Alternative Bibliotheken:</a></h4>
+
+<ul>
+<li><p><a href="https://code.google.com/p/kite-lib/">kyte-lib</a></p></li>
+<li><p><a href="http://doc.akka.io/docs/akka/snapshot/common/circuitbreaker.html">Akka</a></p></li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>Ein Blick hinter die Kulissen</title>
+            <link>https://www.innoq.com/de/podcast/014-innoq/</link>
+            <pubDate>Fri, 16 May 2014 00:00:00 +0200</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>innoQ im Porträt</itunes:subtitle>
+            <itunes:summary>In dieser Folge sitzt Stefan Tilkov einmal auf der anderen Seite des Tisches: Till Schulte-Coerne interviewt den Geschäftsführer der innoQ Deutschland über die Philosophie und Werte des Unternehmens. Stefan erzählt z.B. warum man sich bewusst für einen Mangel an formalen Prozessen entschieden hat, was innoQ für die Förderung des internen Know-Hows macht und wieso es sich lohnt, mehrmals pro Jahr mehrtägige Firmenevents zu organisieren.</itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/014-innoq.m4a" length="32433871" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/014-innoq.m4a</guid>
+            <itunes:duration>1992</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>In dieser Folge sitzt Stefan Tilkov einmal auf der anderen Seite des Tisches: Till Schulte-Coerne interviewt den Geschäftsführer der innoQ Deutschland über die Philosophie und Werte des Unternehmens. Stefan erzählt z.B. warum man sich bewusst für einen Mangel an formalen Prozessen entschieden hat, was innoQ für die Förderung des internen Know-Hows macht und wieso es sich lohnt, mehrmals pro Jahr mehrtägige Firmenevents zu organisieren.</p><ul>
+<li><p><a href="http://www.innoq.com/blog/st/2012/09/innoq-company-events/">Blogpost zu innoQ-Events von Stefan Tilkov</a></p></li>
+<li><p><a href="http://www.michaelnygard.com/blog/">Blog von Michael Nygard</a></p></li>
+<li><p><a href="http://voelterblog.blogspot.de/">Blog von Markus Völter</a></p></li>
+<li><p><a href="http://steve.vinoski.net/blog/">Blog von Steve Vinoski</a></p></li>
+<li><p><a href="http://jexp.de/blog/">Blog von Michael Hunger</a></p></li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>Vom Dasein eines Apache Software Foundation-Mitglieds</title>
+            <link>https://www.innoq.com/de/podcast/013-apache-software-foundation/</link>
+            <pubDate>Thu, 17 Apr 2014 00:00:00 +0200</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Software für die ganze Welt</itunes:subtitle>
+            <itunes:summary>In dieser Episode spricht Till Schulte-Coerne mit Stefan Bodewig über die Apache Software Foundation (ASF), eine Organisation zur Förderung von Open Source-Software, in der sich Entwickler vorwiegend ehrenamtlich betätigen. Stefan ist seit vielen Jahren Mitglied der ASF. Er berichtet über ihre Strukturen, die Unterschiede zu anderen Organisationen wie der Eclipse Foundation, die Arbeit in den einzelnen Apache-Projekten und von seinem Alltag als Committer und Vice President.</itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/013-apache-software-foundation.m4a" length="35052391" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/013-apache-software-foundation.m4a</guid>
+            <itunes:duration>2154</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>In dieser Episode spricht Till Schulte-Coerne mit Stefan Bodewig über die Apache Software Foundation (ASF), eine Organisation zur Förderung von Open Source-Software, in der sich Entwickler vorwiegend ehrenamtlich betätigen. Stefan ist seit vielen Jahren Mitglied der ASF. Er berichtet über ihre Strukturen, die Unterschiede zu anderen Organisationen wie der Eclipse Foundation, die Arbeit in den einzelnen Apache-Projekten und von seinem Alltag als Committer und Vice President.</p><h4><a id="lizenzen:" href="#lizenzen:">Lizenzen:</a></h4>
+
+<ul>
+<li><p><a href="http://opensource.org/licenses/MIT">MIT License</a></p></li>
+<li><p><a href="http://www.apache.org/licenses/LICENSE-1.0">Apache License 1.0</a></p></li>
+<li><p><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a></p></li>
+<li><p><a href="http://www.gnu.org/licenses/gpl.txt">GNU Public License</a></p></li>
+</ul>
+
+<h4><a id="projekteunterbeteiligungvonstefan:" href="#projekteunterbeteiligungvonstefan:">Projekte unter Beteiligung von Stefan:</a></h4>
+
+<ul>
+<li><p><a href="http://ant.apache.org/">Apache Ant</a></p></li>
+<li><p><a href="http://commons.apache.org/proper/commons-compress/">Apache Commons Compress</a></p></li>
+<li><p><a href="http://gump.apache.org/">Apache Gump</a></p></li>
+<li><p><a href="http://logging.apache.org/log4net/">Apache Log4Net</a></p></li>
+</ul>
+
+<h4><a id="andereerwähnteapache-projekte:" href="#andereerw%C3%A4hnteapache-projekte:">Andere erwähnte Apache-Projekte:</a></h4>
+
+<ul>
+<li><p><a href="http://hadoop.apache.org/">Apache Hadoop</a></p></li>
+<li><p><a href="http://tomcat.apache.org/">Apache Tomcat</a></p></li>
+<li><p><a href="http://lucene.apache.org/">Apache Lucene</a></p></li>
+<li><p><a href="http://couchdb.apache.org/">Apache CouchDB</a></p></li>
+<li><p><a href="http://openoffice.apache.org/">Apache OpenOffice</a></p></li>
+<li><p><a href="http://subversion.apache.org/">Apache Subversion</a></p></li>
+</ul>
+
+<h4><a id="allgemeinelinks:" href="#allgemeinelinks:">Allgemeine Links:</a></h4>
+
+<ul>
+<li><p><a href="http://incubator.apache.org/">Der Apache Incubator</a></p></li>
+<li><p><a href="https://github.com/apache/">Apache-Projekte bei Github</a></p></li>
+<li><p><a href="http://blogs.apache.org/infra/entry/improved_integration_between_apache_and">Blog-Eintrag zur Github-Integration</a></p></li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>Grid-Computing</title>
+            <link>https://www.innoq.com/de/podcast/012-grid-computing/</link>
+            <pubDate>Wed, 26 Mar 2014 00:00:00 +0100</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Große Netze für große Probleme</itunes:subtitle>
+            <itunes:summary>Thomas Kentemich unterhält sich mit Till Schulte-Coerne über das Thema Grid-Computing. Ein Grid ist ein verteiltes System, das intensive Berechnungen
+                auf einem virtuellen Supercomputer aus lose gekoppelten Einzelsystemen löst. Die Ressourcen in einem Grid werden von den Nutzern gemeinschaftlich und transparent genutzt.</itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/012-grid-computing.m4a" length="30573423" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/012-grid-computing.m4a</guid>
+            <itunes:duration>1877</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>Thomas Kentemich unterhält sich mit Till Schulte-Coerne über das Thema Grid-Computing. Ein Grid ist ein verteiltes System, das intensive Berechnungen
+auf einem virtuellen Supercomputer aus lose gekoppelten Einzelsystemen löst. Die Ressourcen in einem Grid werden von den Nutzern gemeinschaftlich und transparent genutzt.</p><h4><a id="einführung" href="#einf%C3%BChrung">Einführung</a></h4>
+
+<ul>
+<li><a href="http://www.gridcafe.org/EN/">Einführung in Grid Computing</a></li>
+<li><a href="http://www.ogf.org/dokuwiki/doku.php">Open Grid Forum</a></li>
+<li><a href="http://www.eu-emi.eu/">European Middleware Initiative</a></li>
+</ul>
+
+<h4><a id="standards" href="#standards">Standards</a></h4>
+
+<ul>
+<li><a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=wsrf">Web Service Resource Framework (WSRF)</a></li>
+<li><a href="http://occi-wg.org/">Open Cloud Community Interface</a></li>
+</ul>
+
+<h4><a id="middleware" href="#middleware">Middleware</a></h4>
+
+<ul>
+<li><a href="http://toolkit.globus.org/toolkit/">Globus</a></li>
+<li><a href="http://sourceforge.net/projects/gpe4gtk/">Grid Programming Environment (GPE)</a></li>
+<li><a href="http://www.unicore.org/">UNICORE</a></li>
+</ul>
+
+<h4><a id="productiongrids" href="#productiongrids">Production Grids</a></h4>
+
+<ul>
+<li><a href="http://www.d-grid.de/">D-Grid</a></li>
+<li><a href="http://cern.ch">Openlab, LHC</a></li>
+</ul>
+
+<h4><a id="communitygrids" href="#communitygrids">Community Grids</a></h4>
+
+<ul>
+<li><a href="https://boinc.berkeley.edu/">BOINC</a></li>
+<li><a href="http://setiathome.ssl.berkeley.edu/">Seti@Home, Extra-terrestrische Radio Signale</a></li>
+<li><a href="http://folding.stanford.edu/home/">Folding@Home, Arzneimittel Forschung</a></li>
+<li><a href="http://boinc.bakerlab.org/">Rosetta@Home, Protein Faltung</a></li>
+<li><a href="http://einstein.phys.uwm.edu/">Einstein@Home Gravitations-Wellen Forschung</a></li>
+<li>
+<a href="https://en.wikipedia.org/wiki/List_of_distributed_computing_projects">List of distributed computing projects</a> …und viele mehr</li>
+</ul>
+
+<h4><a id="fun" href="#fun">Fun</a></h4>
+
+<ul>
+<li><a href="http://www.southampton.ac.uk/~sjc/raspberrypi/">Rapsberry Pi Parallelrechner</a></li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>Sicherheit von IT-Systemen</title>
+            <link>https://www.innoq.com/de/podcast/011-security/</link>
+            <pubDate>Mon, 10 Feb 2014 00:00:00 +0100</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Allgemeine Aspekte der IT-Sicherheit und der Web-Sicherheit im Speziellen</itunes:subtitle>
+            <itunes:summary>Willem van Kerkhof spricht mit Stefan Tilkov über die Sicherheit von IT-Systemen. Allgemeine nichttechnischen Aspekte, wie die Wahl von Passwörtern, sind dabei mindestens genauso wichtig wie technische Implikationen beispielsweise zur Absicherung von Web-Anwendungen.</itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/010-security.m4a" length="28044671" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/010-security.m4a</guid>
+            <itunes:duration>1721</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>Willem van Kerkhof spricht mit Stefan Tilkov über die Sicherheit von IT-Systemen. Allgemeine nichttechnischen Aspekte, wie die Wahl von Passwörtern, sind dabei mindestens genauso wichtig wie technische Implikationen beispielsweise zur Absicherung von Web-Anwendungen.</p><ul>
+<li>http://owasp.org, insbesondere:</li>
+<li>https://www.owasp.org/index.php/Category:Vulnerability Kategorien von Sicherheitslücken</li>
+<li>https://www.owasp.org/index.php/XSS Cross-Site Scripting</li>
+<li>Output von Bruce Schneier:</li>
+<li>https://www.schneier.com/books.html Bücher</li>
+<li>https://www.schneier.com/essays.html Essays</li>
+<li>http://www.openssl.org OpenSSL-Bibliothek und Tools</li>
+<li>http://guides.rubyonrails.org/security.html Ruby Security Guide</li>
+<li>http://xkcd.com/1286 Kreuzworträtsel</li>
+<li>http://blog.fefe.de für das tägliche Paranoia-Update</li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>Graphdatenbanken</title>
+            <link>https://www.innoq.com/de/podcast/010-graphen-db/</link>
+            <pubDate>Fri, 24 Jan 2014 00:00:00 +0100</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Vor- und Nachteile graphbasierter Datenbanken</itunes:subtitle>
+            <itunes:summary>In der zehnten Folge unseres Podcasts spricht Oliver Tigges mit Stefan Tilkov über Graphdatenbanken, eine Unterklasse der NoSQL-Datenbanken. Oliver erklärt welche Eigenschaften graphbasierte Datenbanken haben und beschreibt Szenarien in denen ihr Einsatz gegenüber dem Einsatz von "klassischen" relationalen Datenbanken sinnvoll erscheint.</itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/010-graphen-db.m4a" length="38600013" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/010-graphen-db.m4a</guid>
+            <itunes:duration>2373</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>In der zehnten Folge unseres Podcasts spricht Oliver Tigges mit Stefan Tilkov über Graphdatenbanken, eine Unterklasse der NoSQL-Datenbanken. Oliver erklärt welche Eigenschaften graphbasierte Datenbanken haben und beschreibt Szenarien in denen ihr Einsatz gegenüber dem Einsatz von &quot;klassischen&quot; relationalen Datenbanken sinnvoll erscheint.</p><ul>
+<li><a href="http://graphdatabases.com">Graph Databases Buch</a></li>
+<li><a href="http://www.neo4j.org">Neo4j</a></li>
+<li><a href="http://www.orientechnologies.com/orientdb/">OrientDB</a></li>
+<li><a href="http://www.sparsity-technologies.com/dex">DEX</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Triplestore">Triplestores</a></li>
+<li><a href="http://www.neo4j.org/learn/cypher">Cypher</a></li>
+<li><a href="http://www.w3.org/TR/rdf-sparql-query/">SPARQL</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Graph_database">Wikipedia zu Graphdatenbanken</a></li>
+<li><a href="http://blog.neo4j.org/2013/01/demining-join-bomb-with-graph-queries.html">index-free adjacency</a></li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>Play!</title>
+            <link>https://www.innoq.com/de/podcast/009-play/</link>
+            <pubDate>Mon, 18 Nov 2013 00:00:00 +0100</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Das Full Stack Web-Framework auf der JVM</itunes:subtitle>
+            <itunes:summary>In seinem zweiten innoQ Podcast spricht Tobias Neef mit Stefan Tilkov über das Web-Framework Play. Tobias stellt die wesentlichen Features des Frameworks vor und beschreibt deren Einsatz. Er diskutiert den alternativen Einsatz von Play mit Java oder Scala und geht auf die Hauptunterschiede zwischen Play 1 und 2 ein.</itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/009-play.m4a" length="32292143" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/009-play.m4a</guid>
+            <itunes:duration>1984</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>In seinem zweiten innoQ Podcast spricht Tobias Neef mit Stefan Tilkov über das Web-Framework Play. Tobias stellt die wesentlichen Features des Frameworks vor und beschreibt deren Einsatz. Er diskutiert den alternativen Einsatz von Play mit Java oder Scala und geht auf die Hauptunterschiede zwischen Play 1 und 2 ein.</p><ul>
+<li><p><a href="http://www.playframework.com/">Play Homepage</a></p></li>
+<li><p><a href="http://lesscss.org/">LESS</a></p></li>
+<li><p><a href="http://coffeescript.org/">Coffeescript</a></p></li>
+<li><p><a href="http://www.playframework.com/documentation/2.2.x/ScalaTemplates">Play Templates</a></p></li>
+<li><p><a href="http://akka.io/">Akka</a></p></li>
+<li><p><a href="http://www.playframework.com/documentation/2.2.x/ScalaWS">Webservices</a></p></li>
+<li><p><a href="http://en.wikipedia.org/wiki/WebSocket">WebSockets</a></p></li>
+<li><p><a href="http://www.playframework.com/documentation/2.2.x/ScalaWebSockets">Play WebSockets</a></p></li>
+<li><p><a href="http://slick.typesafe.com/">Slick</a> </p></li>
+<li><p><a href="https://www.coursera.org/course/reactive">Reactive Coursera</a></p></li>
+<li><p><a href="http://netty.io/">Netty</a></p></li>
+<li><p><a href="https://github.com/dlecan/play2-war-plugin">Play 2 War Plugin</a> </p></li>
+<li><p><a href="http://typesafe.com/activator">Typesafe Activator</a></p></li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>Modern Batch</title>
+            <link>https://www.innoq.com/de/podcast/008-batch/</link>
+            <pubDate>Sun, 27 Oct 2013 00:00:00 +0200</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Zeitgemäße Architekturen zur Massendatenverarbeitung</itunes:subtitle>
+            <itunes:summary>In dieser Folge unterhalten sich Frank Hinkel und Stefan Tilkov über Batchverarbeitung, was gerade für große Unternehmen immer ein wichtiger Bestandteil der IT gewesen ist und bleiben wird. Frank stellt die Herausforderungen der Thematik vor und spricht über die Bedeutung von Frameworks wie Spring Batch.</itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/008-batch.m4a" length="25417281" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/008-batch.m4a</guid>
+            <itunes:duration>1560</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>In dieser Folge unterhalten sich Frank Hinkel und Stefan Tilkov über Batchverarbeitung, was gerade für große Unternehmen immer ein wichtiger Bestandteil der IT gewesen ist und bleiben wird. Frank stellt die Herausforderungen der Thematik vor und spricht über die Bedeutung von Frameworks wie Spring Batch.</p><ul>
+<li><p><a href="http://docs.spring.io/spring-batch/">Spring Batch</a></p></li>
+<li><p><a href="http://docs.spring.io/spring-batch/batch-principles-guidelines.html">General Principles and Guidelines for Batch Architectures</a></p></li>
+<li><p><a href="http://jcp.org/en/jsr/detail?id=352">JSR 352: Batch Applications for the Java Platform</a></p></li>
+<li><p><a href="https://java.net/projects/jbatch/">JBatch -ref implementation of JSR 352</a></p></li>
+<li><p><a href="http://www.oracle.com/technetwork/articles/java/batch-1965499.html">An Overview of Batch Processing in Java EE 7.0</a></p></li>
+<li><p><a href="http://www-03.ibm.com/software/products/us/en/extended-deployment-compute-grid/">WebSphere Extended Deployment Compute Grid</a></p></li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>Scala</title>
+            <link>https://www.innoq.com/de/podcast/007-scala/</link>
+            <pubDate>Fri, 04 Oct 2013 00:00:00 +0200</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Was die objektorientierte, funktionale JVM-Sprache in der Praxis bringt</itunes:subtitle>
+            <itunes:summary>In dieser Folge diskutiert Tobias Neef mit Stefan Tilkov über Vorteile von und Vorurteile gegen Scala. Tobias gibt einen kurzen Überblick über einige wichtige Features und sowie deren Nutzen in der Praxis.</itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/007-scala.m4a" length="36599564" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/007-scala.m4a</guid>
+            <itunes:duration>2252</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>In dieser Folge diskutiert Tobias Neef mit Stefan Tilkov über Vorteile von und Vorurteile gegen Scala. Tobias gibt einen kurzen Überblick über einige wichtige Features und sowie deren Nutzen in der Praxis.</p><ul>
+<li><p><a href="http://scala-lang.org/">Scala Homepage</a></p></li>
+<li><p><a href="http://www.artima.com/shop/programming_in_scala_2ed">Programming in Scala</a></p></li>
+<li><p><a href="http://twitter.github.io/scala_school/">Twitter Scala School</a></p></li>
+<li><p><a href="http://en.wikibooks.org/wiki/Scala/Expressions,_Not_Statements">Expressions</a></p></li>
+<li><p><a href="http://twitter.github.io/scala_school/pattern-matching-and-functional-composition.html">Pattern Matching</a></p></li>
+<li><p><a href="http://scalatutorial.wordpress.com/tag/case-class/">Case Classes</a></p></li>
+<li><p><a href="http://twitter.github.io/scala_school/collections.html">Collections</a></p></li>
+<li><p><a href="http://www.scala-lang.org/old/node/6436">Scala LinkedIn</a></p></li>
+<li><p><a href="http://blog.redfin.com/devblog/2010/05/how_and_why_twitter_uses_scala.html#.Uk6OUmQ2BeM">Scala Twitter</a></p></li>
+<li><p><a href="http://java.dzone.com/articles/state-scala-2013">Scala in 2013</a></p></li>
+<li><p><a href="http://www.scala-lang.org/old/node/8610">Scala Levels</a></p></li>
+<li><p><a href="http://www.scala-sbt.org/">SBT</a></p></li>
+<li><p><a href="http://www.jetbrains.com/idea/features/scala.html">IntelliJ IDEA Scala</a></p></li>
+<li><p><a href="http://scala-ide.org/">Scala IDE (Eclipse)</a></p></li>
+<li><p><a href="http://typesafe.com/activator">Typesafe Activator</a></p></li>
+<li><p><a href="https://www.coursera.org/course/progfun">Functional Programming Principles in Scala</a></p></li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>CSS-Präprozessoren</title>
+            <link>https://www.innoq.com/de/podcast/006-css-praeprozessoren/</link>
+            <pubDate>Fri, 06 Sep 2013 00:00:00 +0200</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Effektives und wartbares CSS programmieren</itunes:subtitle>
+            <itunes:summary>Roman Stranghöner und Falk Hoppe sprechen mit Stefan Tilkov über die Möglichkeit, die Verwendung von CSS mit Hilfe von Präprozessoren zu vereinfachen und besser in die Gesamtarchitektur von Webanwendungen einzubetten.</itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/006-css-praeprozessoren.m4a" length="37963092" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/006-css-praeprozessoren.m4a</guid>
+            <itunes:duration>2336</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>Roman Stranghöner und Falk Hoppe sprechen mit Stefan Tilkov über die Möglichkeit, die Verwendung von CSS mit Hilfe von Präprozessoren zu vereinfachen und besser in die Gesamtarchitektur von Webanwendungen einzubetten.</p><ul>
+<li><p><a href="http://sass-lang.com/">Sass</a></p></li>
+<li><p><a href="http://lesscss.org/">LESS</a></p></li>
+<li><p><a href="http://learnboost.github.io/stylus/">Stylus</a></p></li>
+<li><p><a href="http://haml.info/">HAML</a></p></li>
+<li><p><a href="http://coffeescript.org/">CoffeeScript</a></p></li>
+<li><p><a href="https://github.com/hcatlin/libsass">libsass</a></p></li>
+<li><p><a href="http://sassmeister.com/">sassmeister.com</a></p></li>
+<li><p><a href="http://incident57.com/codekit/">CodeKit</a></p></li>
+<li><p><a href="http://compass-style.org/">Compass</a></p></li>
+<li><p><a href="http://compass-style.org/reference/compass/typography/vertical_rhythm/">Vertical Rhythm</a></p></li>
+<li><p><a href="http://smacss.com/">SMACCS</a></p></li>
+<li><p><a href="http://getbootstrap.com/">Bootstrap</a></p></li>
+<li><p><a href="http://foundation.zurb.com/">Foundation</a></p></li>
+<li><p><a href="http://susy.oddbird.net/">Susy</a></p></li>
+<li><p><a href="http://singularity.gs/">Singularity</a></p></li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>CSS-Architektur</title>
+            <link>https://www.innoq.com/de/podcast/005-css-architektur/</link>
+            <pubDate>Fri, 23 Aug 2013 00:00:00 +0200</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Architekturaspekte von Cascading Style Sheets</itunes:subtitle>
+            <itunes:summary>Falk Hoppe und Roman Stranghöner sprechen mit Stefan Tilkov über die Architekturaspekte von CSS.</itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/005-css-architektur.m4a" length="40736472" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/005-css-architektur.m4a</guid>
+            <itunes:duration>2508</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>Falk Hoppe und Roman Stranghöner sprechen mit Stefan Tilkov über die Architekturaspekte von CSS.</p><ul>
+<li><a href="https://github.com/necolas/idiomatic-css">Idiomatic CSS</a></li>
+<li><a href="http://blog.millermedeiros.com/solid-css/">SOLID CSS</a></li>
+<li><a href="http://smacss.com/">SMACSS</a></li>
+<li><a href="https://github.com/stubbornella/oocss/wiki">OOCSS</a></li>
+<li><a href="http://bem.info/">BEM</a></li>
+<li><a href="http://www.csszengarden.com/">CSS Zen Garden</a></li>
+<li><a href="http://learn.shayhowe.com/html-css/">A Beginners Guide to HTML and CSS</a></li>
+<li><a href="http://meyerweb.com/eric/tools/css/reset/">CSS Reset</a></li>
+<li><a href="http://necolas.github.io/normalize.css/">Normalize CSS</a></li>
+<li><a href="http://emmet.io/">ZenHTML aka Emmet</a></li>
+<li><a href="http://livereload.com/">Live Reload</a></li>
+<li><a href="https://incident57.com/codekit/">Codekit</a></li>
+<li><a href="http://csslint.net/">CSS Lint</a></li>
+<li><a href="http://zmoazeni.github.io/csscss/">CSSCSS</a></li>
+<li><a href="http://alistapart.com/article/responsive-web-design">Responsive Web Design</a></li>
+<li><a href="http://forecast.io/">Forecast.io</a></li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>Clojure</title>
+            <link>https://www.innoq.com/de/podcast/004-clojure/</link>
+            <pubDate>Fri, 09 Aug 2013 00:00:00 +0200</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Ein pragmatisches Lisp auf der JVM</itunes:subtitle>
+            <itunes:summary>Stefan Tilkov unterhält sich mit Philipp Schirmacher über Clojure, ein pragmatisches und praxistaugliches Lisp für die Java Virtual Machine.</itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/004-clojure.m4a" length="30935123" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/004-clojure.m4a</guid>
+            <itunes:duration>1902</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>Stefan Tilkov unterhält sich mit Philipp Schirmacher über Clojure, ein pragmatisches und praxistaugliches Lisp für die Java Virtual Machine.</p><ul>
+<li><p><a href="http://clojure.org/">Clojure-Seite</a></p></li>
+<li><p><a href="http://cs.brown.edu/~mph/HerlihyM93/herlihy93transactional.pdf">Paper zu Software Transactional Memory</a></p></li>
+<li><p><a href="http://tryclj.com/">Browser-basierte REPL</a></p></li>
+<li><p><a href="http://en.wikipedia.org/wiki/Lisp_%28programming_language%29">englische Wiki-Seite zu LISP</a></p></li>
+<li><p><a href="http://www.scala-lang.org/">Scala-Seite</a></p></li>
+<li><p><a href="http://groovy.codehaus.org/">Groovy-Seite</a></p></li>
+<li><p><a href="https://github.com/innoq/statuses">Twitter-Klon von innoQ</a></p></li>
+<li><p><a href="http://www.4clojure.com/">Übungsseite 4clojure.com</a></p></li>
+<li><p><a href="http://www.innoq.com/de/clojure">Diverse Artikel und Präsentationen zu Clojure von innoQ</a></p></li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>Architekturdokumentation</title>
+            <link>https://www.innoq.com/de/podcast/003-architekturdokumentation/</link>
+            <pubDate>Mon, 29 Jul 2013 00:00:00 +0200</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Über den richtigen Grad von Dokumentation für Softwarearchitekturen</itunes:subtitle>
+            <itunes:summary>Gernot Starke und Stefan Tilkov unterhalten sich darüber, ob und wozu man Architekturen dokumentieren sollte, welche Mittel es dazu gibt und wie das auch zu Projekten passt, die Sinn haben.</itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/003-architekturdokumentation.m4a" length="16837834" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/003-architekturdokumentation.m4a</guid>
+            <itunes:duration>1723</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>Gernot Starke und Stefan Tilkov unterhalten sich darüber, ob und wozu man Architekturen dokumentieren sollte, welche Mittel es dazu gibt und wie das auch zu Projekten passt, die Sinn haben.</p><ul>
+<li><p>Podcast Gast <a href="http://www.gernotstarke.de">Gernot Starke</a>, <a href="http://www.innoq.com/de/staff/gs">Profil bei innoQ</a></p></li>
+<li><p><a href="http://www.arc42.de">arc42</a></p></li>
+<li><p><a href="http://www.sparxsystems.de">Enterprise Architect</a></p></li>
+<li><p><a href="http://de.wikipedia.org/wiki/Microsoft_Visio">MS Visio</a></p></li>
+<li><p><a href="http://www.omnigroup.com/products/omnigraffle/">OmniGraffle</a></p></li>
+<li><p><a href="http://www.visual-paradigm.com">Visual Paradigm</a></p></li>
+<li><p><a href="http://www.dokchess.de">Stefan Zörner DokChess</a>+</p></li>
+<li><p><a href="http://www.systemsguild.com/pxh.htm">Peter Hruschka</a></p></li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>openHAB: Home-Automation mit Java</title>
+            <link>https://www.innoq.com/de/podcast/002-openhab/</link>
+            <pubDate>Fri, 12 Jul 2013 00:00:00 +0200</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>OSGi für das Internet der Dinge</itunes:subtitle>
+            <itunes:summary>In diesem Podcast unterhalten sich die openHAB-Committer Kai Kreuzer und Thomas Eichstädt-Engelen mit Stefan Tilkov über den technischen Hintergrund des openHAB-Projektes, die Community die sich darum gebildet hat und die Erfahrungen mit einem populären Open Source-Projekt.</itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/002-openhab.m4a" length="34102958" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/002-openhab.m4a</guid>
+            <itunes:duration>2098</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>In diesem Podcast unterhalten sich die openHAB-Committer Kai Kreuzer und Thomas Eichstädt-Engelen mit Stefan Tilkov über den technischen Hintergrund des openHAB-Projektes, die Community die sich darum gebildet hat und die Erfahrungen mit einem populären Open Source-Projekt.</p><ul>
+<li><p><a href="https://code.google.com/p/openhab/">openHAB bei Google Code</a></p></li>
+<li><p><a href="http://podcast.smarter-home.at/sh012/">Podcast zu OpenHAB bei Smarter Home</a></p></li>
+<li><p>Im Artikel <a href="http://www.innoq.com/de/articles/2012/04/internet-of-things">“Die Welt der Dinge in deiner Hand”</a>
+ schreibt Thomas Eichstädt-Engelen über openHAB als Integrationsplattform im IoT</p></li>
+<li><p>Die <a href="http://www.devoxx.com/">Devoxx</a> ist eine der größten Java, Android und
+ HTML5 Konferenzen und neben Belgien mittlerweile auch in Frankreich und
+ Großbritanien vertreten.</p></li>
+<li><p>Die <a href="http://www.osgi.org/Main/HomePage">Open Services Gateway inititive</a>
+ verfolgt das Komponentenmodell um Software zu modularisieren.</p></li>
+<li><p><a href="http://misterhouse.wikispaces.com/">MisterHouse</a> ist eine der ersten
+ Open-Source-Implementierungen für Heimautomatisierung.</p></li>
+<li><p><a href="http://mercurial.selenic.com/">Mercurial</a> gehört zu den plattformunabhängigen
+ und verteilten Versionskontrollsystemen.</p></li>
+<li><p>Den <a href="http://www.knx.de/">KNX-Standard</a> — einer aktuellen und offenen,
+ internationalen Gebäudeautomatisierungsnorm — unterstützen bereits mehr als
+ 100 Firmen.</p></li>
+<li><p>Hinter <a href="http://www.homematic.com/">Homematic</a> verbirgt sich eine weitere
+ Heimautomatisierungslösung.</p></li>
+<li><p><a href="http://www.enocean.com/de/home/?gclid=CImp9trhoqMCFULozAodLlqo3w">Diese Technologie</a>
+ nutzt für Funksignale die durch Arbeit an einem Objekt erzeugte Energie und
+ kommt ohne Batterie aus (Beispiel: Fenstergriff drehen).</p></li>
+<li><p>Die <a href="http://jax.de/">JAX</a> ist eine Konferenz im Bereich JAVA, Apache und XML
+ in Deutschland.</p></li>
+<li><p>Die <a href="http://www.geecon.org/">Geecon</a> ist eine weitere Konferenz im Bereich
+ Java in Polen.</p></li>
+</ul>]]>
+            </description>
+        </item>
+        <item>
+            <title>Frontend-Optimierung von Webanwendungen</title>
+            <link>https://www.innoq.com/de/podcast/001-frontend-optimierung/</link>
+            <pubDate>Fri, 12 Jul 2013 00:00:00 +0200</pubDate>
+            <itunes:author>innoQ</itunes:author>
+            <itunes:subtitle>Techniken für schnelle Frontends</itunes:subtitle>
+            <itunes:summary>In dieser Episode unterhält sich Till Schulte-Coerne mit Stefan Tilkov über die Frontend-Optimierung bei Webanwendungen. Till macht dabei darauf aufmerksam, dass Geschwindigkeit nicht nur im Backend verbessert werden kann und stellt verschiedene Möglichkeiten zum Optimieren vor.</itunes:summary>
+            <itunes:image href="https://www.innoq.com/assets/podcast-18e30963d3c60ccbe32ff4000b28ceb6.jpg"/>
+            <enclosure url="https://www.innoq.com/de/podcast/archive/001-frontend-optimierung.m4a" length="18934011" type="audio/x-m4a"/>
+            <guid>https://www.innoq.com/de/podcast/archive/001-frontend-optimierung.m4a</guid>
+            <itunes:duration>1940</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>
+                <![CDATA[<p>In dieser Episode unterhält sich Till Schulte-Coerne mit Stefan Tilkov über die Frontend-Optimierung bei Webanwendungen. Till macht dabei darauf aufmerksam, dass Geschwindigkeit nicht nur im Backend verbessert werden kann und stellt verschiedene Möglichkeiten zum Optimieren vor.</p><ul>
+<li>
+<a href="http://developer.yahoo.com/yslow/">YSlow</a> ist eine Browser-Extension,
+ analysiert beliebige Websites und listet mögliche Performance-Verbesserungen.</li>
+<li>
+<a href="http://de.wikipedia.org/wiki/SPDY">SPDY</a> ist eine Initiative von Google, die zum
+ Ziel hat, das Web auf Protokollebene schneller zu machen.</li>
+</ul>]]>
+            </description>
+        </item>
+    </channel>
+</rss>

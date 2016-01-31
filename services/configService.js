@@ -1,22 +1,18 @@
-var nconf = require('nconf');
-
-nconf._get = nconf.get;
-nconf.get = function (key, def, cb) {
-    if (typeof def === 'function') {
-        cb = def;
-        def = '';
-    }
-
-    return nconf._get(key, cb) || def;
-};
+'use strict';
+const nconf = require('nconf');
 
 module.exports = (function () {
     nconf.argv().env();
-    if (nconf.get('NODE_ENV', '').toLowerCase() === 'development') {
+
+    const NODE_ENV = (nconf.get('NODE_ENV') || '').toLowerCase();
+
+    if (NODE_ENV === 'development') {
+        console.log('Loading config for:', 'development');
         nconf.add('development', {type: 'literal', store: require('../config/development')});
     }
 
-    if (nconf.get('NODE_ENV', '').toLowerCase() === 'test') {
+    if (NODE_ENV === 'test') {
+        console.log('Loading config for:', 'testing');
         nconf.add('testing', {type: 'literal', store: require('../config/testing')});
     }
 

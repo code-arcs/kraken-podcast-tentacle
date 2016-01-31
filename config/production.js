@@ -9,7 +9,7 @@ module.exports = {
     },
     db: {
         port: 28015,
-        host: 'localhost',
+        host: '127.0.0.1',
         table: 'podcasts'
     }
 };

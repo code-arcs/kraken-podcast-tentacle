@@ -40,19 +40,43 @@ module.exports = {
 
     getItems(podcastId) {
         return podcastRepository.findById(podcastId)
-            .then(podcast => {
-                request(podcast.url)
-            })
+            .then(podcast => request(podcast.url))
             .then(resp => new DOMParser().parseFromString(resp))
-            .then(xml => select('/item', xml))
+            .then(xml => select('//item', xml))
             .then(items => {
-                console.log(items);
-            });
+                return items.map(item => {
+                    return {
+                        title: getTextContent(item, 'title'),
+                        pubDate: getTextContent(item, 'pubDate'),
+                        link: getTextContent(item, 'link'),
+                        description: getTextContent(item, 'description'),
+                        duration: this.__getDurationInSeconds(getTextContent(item, 'itunes:duration'))
+                    }
+                });
+            })
     },
 
     get(id) {
         return podcastRepository.findById(id);
+    },
+
+    __getDurationInSeconds(timeStr) {
+        let result = timeStr;
+
+        if (typeof result === 'number' || !isNaN(+result)) {
+            return +result;
+        }
+
+        if (timeStr.indexOf(':') !== -1) {
+            return timeStr.split(':')
+                .reverse()
+                .map((part, idx) => Math.pow(60, idx) * +part)
+                .reduce((prev, cur) => prev + cur, 0);
+        }
+
+        return result;
     }
+
 };
 
 
@@ -64,13 +88,15 @@ function getFeedContent(feedUrl) {
 function createPodcastEntity(xml, feedUrl) {
     let deferred = Q.defer();
     let podcast = {
-        title: getValue(xml, '//title'),
-        image: getValue(xml, '//image/url') || getAttribute(xml, '//itunes:image', 'href'),
+        title: getTextContent(xml, '//title'),
+        image: getTextContent(xml, '//image/url') || getAttribute(xml, '//itunes:image', 'href'),
         url: feedUrl,
-        description: getValue(xml, '//description'),
-        language: getValue(xml, '//language'),
-        homepage: getValue(xml, '//link')
+        description: getTextContent(xml, '//description'),
+        language: getTextContent(xml, '//language'),
+        homepage: getTextContent(xml, '//link')
     };
+
+    console.log(podcast);
 
     getAndCropImage(podcast.image)
         .then((hash) => {
@@ -82,7 +108,6 @@ function createPodcastEntity(xml, feedUrl) {
         });
 
     return deferred.promise;
-
 }
 
 function getAndCropImage(url) {
@@ -130,11 +155,15 @@ function getAttribute(node, path, attr, idx) {
     return value;
 }
 
-function getValue(node, path, idx) {
-    let value;
-    let xpath = select(path + '/text()', node)[idx || 0];
-    if (xpath) {
-        value = xpath.toString();
+function getTextContent(node, path, idx) {
+    let text = select(path + '/node()', node)[idx || 0];
+    if(text) {
+        if (text.nextSibling && text.nextSibling.data) {
+            return text.nextSibling.data.replace(/\n/g, '');
+        } else {
+            return text.data.trim();
+        }
     }
-    return value;
+
+    return select(path + '/text()', node)[idx || 0];
 }

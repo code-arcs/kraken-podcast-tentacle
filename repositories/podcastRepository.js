@@ -19,9 +19,9 @@ module.exports = {
 
 function save(newEntity) {
     if (!newEntity.createdAt) {
-        newEntity.createdAt = r.now();
+        newEntity.createdAt = Date.now();
     } else {
-        newEntity.updatedAt = r.now();
+        newEntity.updatedAt = Date.now();
     }
 
     return r.table(Config.get('db:table')).getAll(newEntity.url, {index: 'url'}).run(conn)
