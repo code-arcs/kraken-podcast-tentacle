@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "test": "export NODE_ENV=test && mocha --reporter spec ./test/**/*.spec.js",
+    "test": "npm run db:setup:dev && npm run test-it",
+    "test-unit": "export NODE_ENV=test && mocha --reporter spec ./test/**/*.spec.js",
     "test-it": "export NODE_ENV=test && mocha --reporter spec ./test/**/*.spec.it.js",
     "babelify": "node ./config/tasks/browserify.js",
     "db:create": "node ./config/tasks/createDb.js",

@@ -2,7 +2,7 @@
 const nconf = require('nconf');
 
 module.exports = (function () {
-    nconf.argv().env();
+    nconf.argv().env('__');
 
     const NODE_ENV = (nconf.get('NODE_ENV') || '').toLowerCase();
 

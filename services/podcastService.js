@@ -96,8 +96,6 @@ function createPodcastEntity(xml, feedUrl) {
         homepage: getTextContent(xml, '//link')
     };
 
-    console.log(podcast);
-
     getAndCropImage(podcast.image)
         .then((hash) => {
             podcast.image = {

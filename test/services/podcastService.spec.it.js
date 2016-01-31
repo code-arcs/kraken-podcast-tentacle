@@ -109,7 +109,7 @@ describe('PodcastService', function () {
             .catch(done);
     });
 
-    it.only('parses feed items.', done => {
+    it('parses feed items.', done => {
         podcastService.add(fixture[0].url)
             .then(() => podcastService.getAll())
             .then(pc => podcastService.getItems(pc[0].id))

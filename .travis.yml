@@ -1,4 +1,8 @@
 language: node_js
+env:
+ - db__host=127.0.0.1
+services:
+ - rethinkdb
 install:
  - npm install
  - npm install mocha -g
