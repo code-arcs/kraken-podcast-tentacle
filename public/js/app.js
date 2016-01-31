@@ -30513,50 +30513,112 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var socket = require('socket.io-client')();
 var React = require('react');
 
-var PodcastDetail = function (_React$Component) {
-    _inherits(PodcastDetail, _React$Component);
+var PodcastItem = function (_React$Component) {
+    _inherits(PodcastItem, _React$Component);
+
+    function PodcastItem() {
+        _classCallCheck(this, PodcastItem);
+
+        return _possibleConstructorReturn(this, Object.getPrototypeOf(PodcastItem).apply(this, arguments));
+    }
+
+    _createClass(PodcastItem, [{
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'section',
+                { className: 'card' },
+                React.createElement(
+                    'div',
+                    { className: 'card-block' },
+                    React.createElement(
+                        'h2',
+                        null,
+                        this.props.item.title,
+                        ' – ',
+                        React.createElement(
+                            'date',
+                            { className: 'small' },
+                            new Date(this.props.item.pubDate).toTimeString()
+                        )
+                    ),
+                    React.createElement('div', { dangerouslySetInnerHTML: { __html: this.props.item.description } })
+                )
+            );
+        }
+    }]);
+
+    return PodcastItem;
+}(React.Component);
+
+var PodcastDetail = function (_React$Component2) {
+    _inherits(PodcastDetail, _React$Component2);
 
     function PodcastDetail(props) {
         _classCallCheck(this, PodcastDetail);
 
-        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(PodcastDetail).call(this, props));
+        var _this2 = _possibleConstructorReturn(this, Object.getPrototypeOf(PodcastDetail).call(this, props));
 
-        _this.state = {};
-        return _this;
+        _this2.state = {
+            podcast: null,
+            items: []
+        };
+        return _this2;
     }
 
     _createClass(PodcastDetail, [{
         key: 'loadPodcast',
         value: function loadPodcast() {
-            var _this2 = this;
+            var _this3 = this;
 
             $.get('/podcasts/' + this.props.params.id, function (resp) {
-                _this2.setState(resp);
+                _this3.setState({ podcast: resp });
+            });
+        }
+    }, {
+        key: 'loadPodcastItems',
+        value: function loadPodcastItems() {
+            var _this4 = this;
+
+            $.get('/podcasts/' + this.props.params.id + '/items', function (resp) {
+                _this4.setState({ items: resp });
             });
         }
     }, {
         key: 'componentDidMount',
         value: function componentDidMount() {
             this.loadPodcast();
+            this.loadPodcastItems();
         }
     }, {
         key: 'render',
         value: function render() {
-            return React.createElement(
-                'div',
-                { className: 'podcast-detail' },
-                React.createElement('img', { src: '/podcasts/' + this.state.id + '/image/150', className: 'podcast-detail__cover img-thumbnail' }),
-                React.createElement(
-                    'h2',
-                    null,
-                    this.state.title
-                ),
-                React.createElement(
-                    'p',
-                    null,
-                    this.state.description
-                )
-            );
+            if (!this.state.podcast) {
+                return null;
+            } else {
+                return React.createElement(
+                    'article',
+                    { className: 'podcast-detail' },
+                    React.createElement('img', { src: '/podcasts/' + this.state.podcast.id + '/image/150', className: 'podcast-detail__cover img-thumbnail' }),
+                    React.createElement(
+                        'h1',
+                        null,
+                        this.state.podcast.title
+                    ),
+                    React.createElement(
+                        'p',
+                        null,
+                        this.state.podcast.description
+                    ),
+                    React.createElement(
+                        'div',
+                        { className: 'podcast-detail__items' },
+                        this.state.items.map(function (item, idx) {
+                            return React.createElement(PodcastItem, { key: idx, item: item });
+                        })
+                    )
+                );
+            }
         }
     }]);
 
@@ -30748,19 +30810,6 @@ var PodcastNav = function (_React$Component) {
                     _reactRouter.Link,
                     { className: 'navbar-brand', to: '/' },
                     'Podcasts'
-                ),
-                _react2.default.createElement(
-                    'ul',
-                    { className: 'nav navbar-nav' },
-                    _react2.default.createElement(
-                        'li',
-                        { className: 'nav-item' },
-                        _react2.default.createElement(
-                            _reactRouter.Link,
-                            { className: 'nav-link', to: '/12345' },
-                            'Podcast 12345'
-                        )
-                    )
                 ),
                 _react2.default.createElement(
                     'form',

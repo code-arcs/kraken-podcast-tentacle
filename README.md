@@ -5,9 +5,6 @@
 
 Greps Podcast-Feeds.
 
-## Current state
-![doc/screenshot.png](doc/screenshot.png)
-
-## NPM commands
-`npm start` starts the service on port 3000.
-`npm test` runs all tests in ./test folder.
+## Obligatory Screenshots
+<img src="doc/screenshot-list.png" width="100%">
+<img src="doc/screenshot-detail.png" width="100%">
