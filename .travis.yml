@@ -6,7 +6,7 @@ before_install:
   - "wget -qO- https://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -"
   - sudo apt-get update -y && sudo apt-get install rethinkdb -y
 before_script:
- - rethinkdb
+ - rethinkdb --daemon
 install:
  - npm install
  - npm install mocha -g
